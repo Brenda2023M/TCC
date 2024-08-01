@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar</title>
+    <style>
+        body {
+            background-color: #4A90E2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            font-size: 48px; 
+            margin-bottom: 40px; 
+        }
+        .container {
+            background-color: #357ABD;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #4A90E2;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 20px 40px;
+            margin: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: white;
+            color: #4A90E2;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            background-color: #4A90E2;
+            margin-top: 150px; 
+            border-radius: 15px;
+            padding: 15px 30px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecione:</h1>
+    <div class="container">
+        <a href="index.php" class="button">Aluno</a>
+        <a href="indexprof.php" class="button">Professor</a>
+    </div>
+    <a href="index.html" class="button back-button">Voltar</a>
+
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
